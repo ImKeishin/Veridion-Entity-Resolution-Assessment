@@ -1,0 +1,21 @@
+1. Imported the 4 initial libraries to work out the data.
+2. Read the file and took a look at the first few records and column names of the database.
+3. My idea is a K-means clustering algorithm to group the products into a "unique products" 
+cluster and then several other clusters for "duplicate products".
+4. Selected 19 out of the 74 columns to use for the training of my model and removed the 
+unnecesary ones.
+5. Replaced null values ("None") with more suggestive values for the column's topic and 
+converted numeric values into integers and floats respectivelly since they were considered 
+objects.
+6. Wanted to plot the number of companies that are private compared to the ones that are 
+public.
+7. I know that when working with KMeans you need your data to be scaled but only numerical 
+data can be, but even if I would create a new dataframe with only those columns those features 
+still wouldn't be enough to group products. So I guess this algorithm isn't right for this 
+problem because most of the columns are text values.
+8. I picked the number of clusters to be half of the records number (it's very big, I know).
+I tried to plot a graph of the Inertia index for each cluster number and see what the optimal
+one would be (I would've picked the one where the slope isn't descending further and it's 
+maintaining an almost constant value). Even if I would've tried the Silhouette method, where 
+the optimal cluster number would be the top-most point, I'd still have too many cluster points
+(the right number interval for the range function is large).
